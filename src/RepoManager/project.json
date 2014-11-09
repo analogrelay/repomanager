@@ -1,7 +1,8 @@
 ﻿{
-    "webroot": "client",
+    "webroot": "wwwroot",
     "version": "1.0.0-*",
     "exclude": [
+        "wwwroot",
         "client",
         "node_modules",
         "bower_components"
@@ -23,6 +24,6 @@
     },
     "scripts": {
         "postrestore": [ "npm install" ],
-        "prepare": [ "grunt bower:install" ]
+        "prepare": [ "gulp" ]
     }
 }
