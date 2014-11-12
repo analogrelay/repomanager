@@ -15,12 +15,21 @@
         "bower_components"
     ],
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta1",
-        "Microsoft.AspNet.Mvc": "6.0.0-beta1"
+        "Microsoft.AspNet.Server.IIS": "1.0.0-*",
+        "Microsoft.AspNet.Mvc": "6.0.0-*",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
+        "Microsoft.AspNet.Security.OAuth": "1.0.0-*",
+        "Microsoft.AspNet.Security.Cookies": "1.0.0-*",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-*",
+        "Microsoft.Framework.Logging.Console": "1.0.0-*",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta1"
     },
     "frameworks": {
         "aspnet50": { },
         "aspnetcore50": { }
+    },
+    "commands": {
+        "web" : "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
     },
     "scripts": {
         "postrestore": [ "npm install" ],

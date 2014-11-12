@@ -1,6 +1,7 @@
 ﻿var gulp = require('gulp');
-var bower = require('gulp-bower');
+var bower = require('main-bower-files');
 var sass = require('gulp-sass');
+var clean = require('gulp-clean');
 
 gulp.task('sass', function () {
     gulp.src('./client/styles/*.scss')
@@ -9,12 +10,13 @@ gulp.task('sass', function () {
 });
 
 gulp.task('bower', function () {
-    return bower()
-      .pipe(gulp.dest('wwwroot/lib/'))
+    return gulp.src(bower(), { base: 'bower_components' })
+               .pipe(gulp.dest("./wwwroot/lib/"));
 });
 
-gulp.task('default', ['bower', 'sass'], function () {
-    //tcopy font-awesome without a plugin
-    gulp.src("./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}")
-        .pipe(gulp.dest("./wwwroot/fonts"));
+gulp.task('clean', function () {
+    return gulp.src('./wwwroot', {read: false})
+               .pipe(clean());
 });
+
+gulp.task('default', ['bower', 'sass']);
