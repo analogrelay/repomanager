@@ -27,13 +27,13 @@ namespace RepoManager.server.controllers
             var publicReposUrl = identity.Claims.First(x => x.Type == "github:repos:url").Value;
 
             HttpRequestMessage userRequest = new HttpRequestMessage(HttpMethod.Get, publicReposUrl);
-            userRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", tokens.AccessToken);
+			
+            userRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", identity.Claims.First(x=>x.Type== "github:accesstoken").Value);
             userRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            HttpResponseMessage userResponse = await Backchannel.SendAsync(userRequest, Context.RequestAborted);
-            userResponse.EnsureSuccessStatusCode();
-            var text = await userResponse.Content.ReadAsStringAsync();
+            
 
-            return new JsonResult(avatarUrl);
+
+            return new JsonResult(identity.Claims.First(x => x.Type == "github:accesstoken").Value);
         }
     }
 }

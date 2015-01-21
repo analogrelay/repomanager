@@ -147,8 +147,10 @@ namespace GitHubAuth
 
             context.Identity.AddClaim(new Claim("github:created", context.CreatedAt.ToString(), ClaimValueTypes.DateTime, context.Options.AuthenticationType));
             context.Identity.AddClaim(new Claim("github:updated", context.UpdatedAt.ToString(), ClaimValueTypes.DateTime, context.Options.AuthenticationType));
+			context.Identity.AddClaim(new Claim("github:accesstoken", context.AccessToken.ToString(), ClaimValueTypes.String, context.Options.AuthenticationType));
 
-            context.Properties = properties;
+
+			context.Properties = properties;
 
             await Options.Notifications.Authenticated(context);
 
