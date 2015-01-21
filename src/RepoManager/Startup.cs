@@ -15,6 +15,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
 using System.Security.Claims;
+using Microsoft.Framework.Runtime;
 
 namespace RepoManager
 {
@@ -30,9 +31,9 @@ namespace RepoManager
         }
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
+			
             loggerFactory.AddConsole();
             app.UseErrorPage();
-            app.UseErrorHandler("/home/error");
 
             app.UseStaticFiles();
 
