@@ -11,5 +11,10 @@ namespace RepoManager.server.controllers
         {
             return View("~/server/Views/Home/Index.cshtml");
         }
+
+		public IActionResult Issues()
+		{
+			return View("~/server/Views/Home/Issues.cshtml");
+		}
     }
 }

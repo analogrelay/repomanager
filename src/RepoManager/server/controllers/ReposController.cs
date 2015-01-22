@@ -1,43 +1,66 @@
-﻿using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Loader.IIS;
-using Microsoft.AspNet.Mvc;
-using System;
+﻿using System;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Mvc;
 
 namespace RepoManager.server.controllers
 {
-    public class ReposController : Controller
+	[Authorize]
+	public class ReposController : Controller
     {
 		HttpClient _httpClient;
+		ClaimsIdentity _identity;
+		Uri _gitHubApiUrl;
 
 		public ReposController()
         {
 			_httpClient = new HttpClient();
+			_gitHubApiUrl = new Uri("https://api.github.com");
 		}
 
-        [Route("/api/repos")]
+		[Route("/api/repos")]
         public async Task<IActionResult> GetAllRepositories()
         {
-            var identity = Context.User.Identity as ClaimsIdentity;
-            if (identity == null)
-            {
-                return new JsonResult("Must login");
-            }
-
-            var publicReposUrl = identity.Claims.First(x => x.Type == "github:repos:url").Value;
-			var repoRequest = new HttpRequestMessage(HttpMethod.Get, publicReposUrl);
-			repoRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", identity.Claims.First(x=>x.Type== "github:accesstoken").Value);
-			repoRequest.Headers.Add("User-Agent", "TotallyAUserAgent"); //Without a user agent we get a malformed response from GitHub.
-			repoRequest.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-			
-			var repos = await _httpClient.SendAsync(repoRequest);
+			var reposUrl = new Uri(Context.User.Claims.First(x => x.Type == "github:repos:url").Value);
+			var repos = await _httpClient.SendAsync(BuildRequestMessage(HttpMethod.Get, reposUrl));
 			var content = await repos.Content.ReadAsStringAsync();
-
+			
             return new JsonResult(content);
         }
-    }
+
+		[Route("/api/repos/{organisation}")]
+		public async Task<IActionResult> GetRepositoriesForOrganisation(string organisation)
+		{
+			var orgReposUrl = new Uri(_gitHubApiUrl, "/orgs/" + organisation + "/repos");
+			var repos = await _httpClient.SendAsync(BuildRequestMessage(HttpMethod.Get, orgReposUrl));
+			var content = await repos.Content.ReadAsStringAsync();
+
+			return new JsonResult(content);
+		}
+
+		[Route("/api/orgs")]
+		public async Task<IActionResult> GetOrganisation()
+		{
+			var orgsUrl = new Uri(_gitHubApiUrl, "user/orgs");
+			var repos = await _httpClient.SendAsync(BuildRequestMessage(HttpMethod.Get, orgsUrl));
+			var content = await repos.Content.ReadAsStringAsync();
+
+			return new JsonResult(content);
+		}
+
+		private HttpRequestMessage BuildRequestMessage(HttpMethod method, Uri uri)
+		{
+			var requestMessage = new HttpRequestMessage(method, uri);
+			requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", Context.User.Claims.First(x => x.Type == "github:accesstoken").Value);
+			requestMessage.Headers.Add("User-Agent", "RepoManager"); //Without a user agent we get a malformed response from GitHub.
+			requestMessage.Headers.Add("Accept", "application/vnd.github.moondragon+json");
+
+			return requestMessage;
+
+		}
+
+	}
 }
