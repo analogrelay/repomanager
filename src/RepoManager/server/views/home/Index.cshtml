@@ -5,6 +5,13 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="row">
-    HELLO!
-</div>
+@if (User.Identity.IsAuthenticated)
+{
+
+}
+else
+{
+	<div class="row">
+		Hi, <a href="/login" class="btn btn-default btn-login"><span class="fa fa-github"></span> Connect</a> to GitHub to continue.
+	</div>
+}

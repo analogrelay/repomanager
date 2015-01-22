@@ -78,7 +78,7 @@ namespace RepoManager
                 }
                 await next();
             });
-
+			
             app.UseMvc();
         }
 

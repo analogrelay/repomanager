@@ -19,4 +19,9 @@ gulp.task('clean', function () {
                .pipe(clean());
 });
 
-gulp.task('default', ['bower', 'sass']);
+gulp.task('copy', function () {
+	return gulp.src('./client/scripts/*.js')
+               .pipe(gulp.dest("./wwwroot/scripts/"));
+});
+
+gulp.task('default', ['bower', 'sass', 'copy']);
