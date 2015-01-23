@@ -12,9 +12,28 @@ namespace RepoManager.server.controllers
             return View("~/server/Views/Home/Index.cshtml");
         }
 
-		public IActionResult Issues()
+        [Authorize]
+        public IActionResult Dashboard()
+        {
+            return View("~/server/Views/Home/Dashboard.cshtml");
+        }
+
+        [Authorize]
+        public IActionResult Issues()
 		{
 			return View("~/server/Views/Home/Issues.cshtml");
 		}
+
+        [Authorize]
+        public IActionResult Settings()
+        {
+            return View("~/server/Views/Home/Settings.cshtml");
+        }
+
+        [Authorize]
+        public IActionResult Users()
+        {
+            return View("~/server/Views/Home/Dashboard.cshtml");
+        }
     }
 }

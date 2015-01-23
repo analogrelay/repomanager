@@ -1,6 +1,15 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+
+    @(((ClaimsIdentity)User.Identity).Claims.First(x => x.Type == "github:avatar:url").Value
 *@
 @{
-    // ViewBag.Title = "Home Page";
+    ViewBag.Title = "Dashboard";
 }
+
+
+<div class="jumbotron">
+    <h1>Hi, @(User.Identity.Name)</h1>
+
+</div>

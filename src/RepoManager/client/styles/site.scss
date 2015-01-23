@@ -5,12 +5,15 @@
 }
 
 body {
-  background: none repeat scroll 0 0 white; }
-
+  background: none repeat scroll 0 0 white;}
 nav.sidebar-menu-collapsed {
-  width: 50px; }
+  width: 50px; 
+  text-align: center;
+}
 nav.sidebar-menu-expanded {
-  width: 106px; }
+  width: 106px;
+  text-align: left;
+}
 nav.sidebar {
   position: fixed;
   top: 0px;
@@ -40,6 +43,8 @@ nav.sidebar {
       margin: 0;
       padding: 0;
       margin-top: 20px;
+      padding: 4px; 
+      margin-left: -4px;
       list-style-type: none; }
       nav.sidebar ul li a.expandable {
         outline: 0;
@@ -55,11 +60,8 @@ nav.sidebar {
           position: relative;
           bottom: 2px; }
       nav.sidebar ul li.active {
-        background: none repeat scroll 0 0 black;
-        border-radius: 4px;
-        text-align: center;
-        margin-left: -4px;
-        padding: 4px; }
+                background: none repeat scroll 0 0 black;
+                border-radius: 4px; }
         nav.sidebar ul li.active a.expandable {
           color: white !important; }
           nav.sidebar ul li.active a.expandable:hover {

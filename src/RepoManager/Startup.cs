@@ -52,7 +52,7 @@ namespace RepoManager
             {
                 signoutApp.Run(async context =>
                 {
-                    context.Response.Challenge(new AuthenticationProperties() { RedirectUri = "/" }, "GitHub");
+                    context.Response.Challenge(new AuthenticationProperties() { RedirectUri = "/Home/Dashboard" }, "GitHub");
                     return;
                 });
             });
@@ -78,7 +78,7 @@ namespace RepoManager
                 }
                 await next();
             });
-			
+
             app.UseMvc();
         }
 

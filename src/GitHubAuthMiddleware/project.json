@@ -1,9 +1,9 @@
 ﻿{
     "version": "1.0.0-*",
     "dependencies": {
-        "Microsoft.AspNet.Security.OAuth": "1.0.0-beta2",
-		"System.Linq": "4.0.0-beta-22416",
-		"Microsoft.Framework.Logging": "1.0.0-beta2"
+        "Microsoft.AspNet.Security.OAuth": "1.0.0-*",
+		"System.Linq": "4.0.0-*",
+		"Microsoft.Framework.Logging": "1.0.0-*"
     },
 
     "frameworks" : {

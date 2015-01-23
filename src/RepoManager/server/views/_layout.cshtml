@@ -1,77 +1,74 @@
-﻿﻿@using System.Security.Principal
+﻿@using System.Security.Principal
 @using System.Security.Claims
 
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@ViewBag.Title - Repository Manager</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Repository Manager</title>
 
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
 <body>
-	<div class="container">
-		@if (User.Identity.IsAuthenticated)
-		{
-			<nav class='sidebar sidebar-menu-collapsed'>
-				<img class="img-circle avatar" src="@(((ClaimsIdentity)User.Identity).Claims.First(x => x.Type == "github:avatar:url").Value)">
-				<br />
-				<a href='#' id='justify-icon'>
-					<span class='glyphicon glyphicon-align-justify'></span>
-				</a>
-				<ul>
-					<li class='active'>
-						<a class='expandable' href='/' title='Dashboard'>
-							<span class='fa fa-home collapsed-element'></span>
-							<span class='expanded-element'>Dashboard</span>
-						</a>
-					</li>
-					<li>
-						﻿<a asp-action="Issues" asp-route-id="Home" class='expandable'>
-							<span class='fa fa-bug collapsed-element'></span>
-							<span class='expanded-element'>Issues</span>
-						</a>
-					</li>
-					<li>
-						﻿<a asp-action="Users" asp-route-id="Home" class='expandable'>
-							<span class='fa fa-user collapsed-element'></span>
-							<span class='expanded-element'>People</span>
-						</a>
-					</li>
-					<li>
-						<a class='expandable' href='#' title='Settings'>
-							<span class='fa fa-cog collapsed-element'></span>
-							<span class='expanded-element'>Settings</span>
-						</a>
-					</li>
-					<li>
-						<a class='expandable' href='#' title='APIs'>
-							<span class='fa fa-wrench collapsed-element'></span>
-							<span class='expanded-element'>APIs</span>
-						</a>
-					</li>
-				</ul>
-				<a href='/logout' id='logout-icon' title='Logout'>
-					<span class='glyphicon glyphicon-off'></span>
-				</a>
-			</nav>
-}
-		<div class="container body-content">
-			@RenderBody()
-			<hr />
-			@*<footer>
-				<p>&copy; @DateTime.Now.Year</p>
-			</footer>*@
-		</div>
-		<script src="~/lib/jquery/jquery.js"></script>
-		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-		<script src="~/scripts/sidebar.js"></script>
+    <div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <nav class='sidebar sidebar-menu-collapsed'>
+                <!--<img class="img-circle avatar" src="@(((ClaimsIdentity)User.Identity).Claims.First(x => x.Type == "github:avatar:url").Value)">
+                <br />-->
+                <a href='#' id='justify-icon'>
+                    <span class='glyphicon glyphicon-align-justify'></span>
+                </a>
+                <ul>
+                    <li asp-action='Dashboard' asp-controller='Home' active-class='active'>
+                        <a asp-action='Dashboard' asp-controller='Home' class='expandable' title='Dashboard'>
+                            <span class='fa fa-tachometer collapsed-element'></span>
+                            <span class='expanded-element'>Dashboard</span>
+                        </a>
+                    </li>
+                    <li asp-action='Issues' asp-controller='Home' active-class='active'>
+                        <a asp-action='Issues' asp-controller='Home' class='expandable' title='Issues'>
+                            <span class='fa fa-bug collapsed-element'></span>
+                            <span class='expanded-element'>Issues</span>
+                        </a>
+                    </li>
+                    <li asp-action='Users' asp-controller='Home' active-class='active'>
+                        <a asp-action='Users' asp-controller='Home' class='expandable' title='Users'>
+                            <span class='fa fa-user collapsed-element'></span>
+                            <span class='expanded-element'>Users</span>
+                        </a>
+                    </li>
+                    <li asp-action='Settings' asp-controller='Home' active-class='active'>
+                        <a asp-action='Settings' asp-controller='Home' class='expandable' title='Settings'>
+                            <span class='fa fa-cog collapsed-element'></span>
+                            <span class='expanded-element'>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='/logout' id='logout-icon' title='Logout' class='expandable'>
+                            <span class='fa fa-sign-out'></span>
+                            <span class='expanded-element'>Logout</span>
+                        </a>
+                    </li>
+                </ul>
 
-		@RenderSection("scripts", required: false)
-	</div>
+            </nav>
+        }
+            <div class="container body-content">
+                @RenderBody()
+                @*<footer>
+                    <p>&copy; @DateTime.Now.Year</p>
+                    </footer>*@
+            </div>
+            <script src="~/lib/jquery/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/scripts/sidebar.js"></script>
+
+            @RenderSection("scripts", required: false)
+    </div>
 </body>
 </html>

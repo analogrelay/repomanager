@@ -2,16 +2,10 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
-@if (User.Identity.IsAuthenticated)
-{
-
-}
-else
-{
-	<div class="row">
-		Hi, <a href="/login" class="btn btn-default btn-login"><span class="fa fa-github"></span> Connect</a> to GitHub to continue.
-	</div>
-}
+<div class="row">
+    Hi, you need to connect to GitHub to continue.
+    <a href="/login" class="btn btn-default btn-login"><span class="fa fa-github"></span> Connect</a>
+</div>
