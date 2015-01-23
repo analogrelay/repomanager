@@ -55,47 +55,47 @@ namespace GitHubAuth
             }
             if (!string.IsNullOrEmpty(context.AvatarUrl))
             {
-                context.Identity.AddClaim(new Claim("github:avatar:url", context.AvatarUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.AVATAR_URL, context.AvatarUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.GravatarId))
             {
-                context.Identity.AddClaim(new Claim("github:avatar:url", context.GravatarId, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.GRAVATAR_URL, context.GravatarId, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.Url))
             {
-                context.Identity.AddClaim(new Claim("github:url", context.Url, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.GRAVATAR_URL, context.Url, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.HTMLUrl))
             {
-                context.Identity.AddClaim(new Claim("github:html:url", context.HTMLUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.USER_HTML_URL, context.HTMLUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.FollowersUrl))
             {
-                context.Identity.AddClaim(new Claim("github:followers:url", context.FollowersUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.FOLLOWERS_URL, context.FollowersUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.FollowingUrl))
             {
-                context.Identity.AddClaim(new Claim("github:following:url", context.FollowingUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.FOLLOWING_URL, context.FollowingUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.GistsUrl))
             {
-                context.Identity.AddClaim(new Claim("github:gists:url", context.GistsUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.PUBLIC_GISTS_URL, context.GistsUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.StarredUrl))
             {
-                context.Identity.AddClaim(new Claim("github:starred:url", context.StarredUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.STARRED_URL, context.StarredUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.SubscriptionUrl))
             {
-                context.Identity.AddClaim(new Claim("github:subscriptions:url", context.SubscriptionUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.SUBSCRIPTIONS_URL, context.SubscriptionUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.OrganizationsUrl))
             {
-                context.Identity.AddClaim(new Claim("github:organizations:url", context.OrganizationsUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.ORGANIZATIONS_URL, context.OrganizationsUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.ReposUrl))
             {
-                context.Identity.AddClaim(new Claim("github:repos:url", context.ReposUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
+                context.Identity.AddClaim(new Claim(ClaimKeys.REPOS_URL, context.ReposUrl, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
             if (!string.IsNullOrEmpty(context.EventsUrl))
             {
@@ -140,10 +140,10 @@ namespace GitHubAuth
                 context.Identity.AddClaim(new Claim("github:bio", context.Bio, ClaimValueTypes.String, context.Options.AuthenticationType));
             }
 
-            context.Identity.AddClaim(new Claim("github:public:repos", context.PublicRepos.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
-            context.Identity.AddClaim(new Claim("github:public:gists", context.PublicGists.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
-            context.Identity.AddClaim(new Claim("github:followers", context.Followers.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
-            context.Identity.AddClaim(new Claim("github:following", context.Following.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
+            context.Identity.AddClaim(new Claim(ClaimKeys.REPOS, context.PublicRepos.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
+            context.Identity.AddClaim(new Claim(ClaimKeys.PUBLIC_GISTS, context.PublicGists.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
+            context.Identity.AddClaim(new Claim(ClaimKeys.FOLLOWERS, context.Followers.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
+            context.Identity.AddClaim(new Claim(ClaimKeys.FOLLOWING, context.Following.ToString(), ClaimValueTypes.Integer, context.Options.AuthenticationType));
 
             context.Identity.AddClaim(new Claim("github:created", context.CreatedAt.ToString(), ClaimValueTypes.DateTime, context.Options.AuthenticationType));
             context.Identity.AddClaim(new Claim("github:updated", context.UpdatedAt.ToString(), ClaimValueTypes.DateTime, context.Options.AuthenticationType));

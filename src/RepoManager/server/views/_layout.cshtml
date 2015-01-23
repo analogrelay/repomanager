@@ -1,5 +1,4 @@
-﻿@using System.Security.Principal
-@using System.Security.Claims
+﻿
 
 <!DOCTYPE html>
 <html>
@@ -14,12 +13,10 @@
 
 </head>
 <body>
-    <div>
+    <div class=''>
         @if (User.Identity.IsAuthenticated)
         {
             <nav class='sidebar sidebar-menu-collapsed'>
-                <!--<img class="img-circle avatar" src="@(((ClaimsIdentity)User.Identity).Claims.First(x => x.Type == "github:avatar:url").Value)">
-                <br />-->
                 <a href='#' id='justify-icon'>
                     <span class='glyphicon glyphicon-align-justify'></span>
                 </a>
@@ -58,11 +55,8 @@
 
             </nav>
         }
-            <div class="container body-content">
+            <div class="container-fluid body-content">
                 @RenderBody()
-                @*<footer>
-                    <p>&copy; @DateTime.Now.Year</p>
-                    </footer>*@
             </div>
             <script src="~/lib/jquery/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

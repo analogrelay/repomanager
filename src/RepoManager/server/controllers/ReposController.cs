@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-namespace RepoManager.server.controllers
+namespace RepoManager.Server.controllers
 {
 	[Authorize]
 	public class ReposController : Controller

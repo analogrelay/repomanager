@@ -1,11 +1,14 @@
 ﻿.avatar {
-  max-height:32px;
-  max-width: 32px;
+  max-height:100px;
+  max-width: 100px;
   vertical-align:middle;
 }
 
 body {
-  background: none repeat scroll 0 0 white;}
+  background: none repeat scroll 0 0 white;
+  padding-left: 55px;
+  padding-right: 5px;
+}
 nav.sidebar-menu-collapsed {
   width: 50px; 
   text-align: center;
@@ -21,6 +24,7 @@ nav.sidebar {
   height: 100%;
   background: none repeat scroll 0 0 #0099ff;
   color: white;
+  z-index: 1;
   padding: 20px 10px; }
   nav.sidebar a#justify-icon {
     outline: 0;

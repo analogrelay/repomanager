@@ -1,15 +1,39 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
-
-    @(((ClaimsIdentity)User.Identity).Claims.First(x => x.Type == "github:avatar:url").Value
-*@
+﻿@model RepoManager.Server.Model.DashboardViewModel
 @{
     ViewBag.Title = "Dashboard";
 }
 
 
-<div class="jumbotron">
-    <h1>Hi, @(User.Identity.Name)</h1>
-
+<div class="row">
+    <div class="col-md-10">
+        <h1>Hi, @(User.Identity.Name)</h1>
+    </div>
+    <div class="col-md-2">
+        <img class="img-rounded avatar" src="@(Model.AvatarUri)">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>User Stats</h2>
+        <ul>
+            <li>
+                <b>Followers: </b><a href="@(Model.FollowersUri)">@(Model.Followers)</a>
+            </li>
+            <li>
+                <b>Followers: </b><a href="@(Model.FollowingUri)">@(Model.Following)</a>
+            </li>
+            <li>
+                <b>Public Repos: </b><a href="@(Model.PublicReposUri)">@(Model.PublicRepos)</a>
+            </li>
+            <li>
+                <b>Public Gists: </b><a href="@(Model.PublicGistsUri)">@(Model.PublicGists)</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Repo Stats</h2>
+    </div>
+    <div class="col-md-4">
+        <h2>Some Other Stats</h2>
+    </div>
 </div>
