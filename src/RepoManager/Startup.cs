@@ -79,7 +79,16 @@ namespace RepoManager
                 await next();
             });
 
-            app.UseMvc();
+            app.UseMvc(routes => {
+                routes.MapRoute(
+                   name: "default",
+                   template: "{controller}/{action}/{id?}",
+                   defaults: new { controller = "Home", action = "Dashboard" });
+
+                routes.MapRoute(
+                    name: "api",
+                    template: "{controller}/{id?}");
+            });
         }
 
         public void ConfigureServices(IServiceCollection services)
