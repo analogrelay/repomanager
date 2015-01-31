@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.22512.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3812CA13-8B86-4AB9-9DC0-E3652655EC16}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RepoManager", "src\RepoManager\RepoManager.xproj", "{80EB6C4E-4544-423E-A94C-994EA9C90172}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RepoManager", "src\RepoManager\RepoManager.kproj", "{80EB6C4E-4544-423E-A94C-994EA9C90172}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{357D1DDC-E46A-4F16-8414-3F8C33C78180}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global_1json__JSONSchema = http://json.schemastore.org/global
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GitHubAuth", "src\GitHubAuthMiddleware\GitHubAuth.xproj", "{FD7CD995-A1AA-4080-BD20-94A4C36717D1}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "GitHubAuth", "src\GitHubAuthMiddleware\GitHubAuth.kproj", "{FD7CD995-A1AA-4080-BD20-94A4C36717D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@
         "node_modules",
         "bower_components"
     ],
-    "packExclude": [
+    "packExclude": [ 
         "**.kproj",
         "**.user",
         "**.vspscc",
@@ -34,7 +34,7 @@
         "web" : "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
     },
     "scripts": {
-        "postrestore": [ "npm install", "bower install" ],
+        "postrestore": [ "npm install", "bower install"  ],
         "prepare": [ "gulp" ]
     }
 }
