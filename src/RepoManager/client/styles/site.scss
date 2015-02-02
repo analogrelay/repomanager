@@ -1,4 +1,13 @@
-﻿.avatar {
+
+select{
+  margin-bottom: 5px;
+}
+
+.issuesList li:hover{
+  background: #B2B2B2;
+}
+
+.avatar {
   max-height:100px;
   max-width: 100px;
   vertical-align:middle;

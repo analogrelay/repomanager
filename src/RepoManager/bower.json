@@ -1,34 +1,18 @@
 {
-    "name": "RepoManager",
-    "private": true,
-    "dependencies": {
-        "bootstrap": "~3.0.0",
-        "font-awesome": "~4.2.0",
-        "jquery": "~1.10.2",
-        "jquery-validation": "~1.11.1",
-        "jquery-validation-unobtrusive": "~3.2.2"
+  "name": "RepoManager",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "font-awesome": "~4.2.0",
+    "jquery": "~1.10.2",
+    "jquery-validation": "~1.11.1",
+    "jquery-validation-unobtrusive": "~3.2.2",
+    "react": "~0.12.2"
+  },
+  "overrides":{
+      "bootstrap" : {
+        "main" : ["**/*.js", "../../js/*.js"]
+      }
     },
-    "exportsOverride": {
-        "font-awesome": {
-            "fonts": "fonts/*.*",
-            "css" : "css/*.*"
-        },
-        "bootstrap": {
-            "js": "js/*.*",
-            "css": "css/*.*",
-            "fonts": "fonts/*.*"
-        },
-        "jquery": {
-            "js": "jquery.{js,min.js,min.map}"
-        },
-        "jquery-validation": {
-            "": "jquery.validate.js"
-        },
-        "jquery-validation-unobtrusive": {
-            "": "jquery.validate.unobtrusive.{js,min.js}"
-        }
-    },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }

@@ -1,7 +1,753 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
-    ViewBag.Title = "Issues";
+ViewBag.Title = "Issues";
 }
-Issues
+<div class="well">
+	<div class="row">
+		<div class="col-md-6">
+			<select class="form-control">
+				<option value="aspnet">AspNet</option>
+				<option value="NuGet">NuGet</option>
+				<option value="aspnetvnexthackathon">aspnetvnexthackathon</option>
+			</select>
+		</div>
+		<div class="col-md-6">
+			<select class="form-control">
+				<option value="XRE">XRE</option>
+				<option value="MVC">MVC</option>
+				<option value="Home">Home</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">/</span>
+				<input type="text" class="form-control" placeholder="Press '/' to filter"aria-describedby="basic-addon1" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<ul class="list-group issuesList">
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+						<i class="fa fa-angle-double-right fa-lg"></i>
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<span class="horiz-flag">
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							</span>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">1.0.0-rc1</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">1.0.0-rc1</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									<span class="css-truncate-target">
+									1.0.0-rc1
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li id="issue_1153" data-issue-id="1153" class="list-group-item">
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-11">
+						<div class="row">
+							<label class="">
+								<input type="checkbox" class="select-toggle-check js-check-all-item js-issues-list-check" name="issues[]" value="1153" />
+							</label>
+							<a href="https://github.com/aspnet/XRE/issues/1153" class="">
+								Change ResolveRootDirectory to only look for global.json
+							</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3A%221+-+Ready%22" aria-label="View all 1 - Ready issues" class="label labelstyle-CCCCCC linked-labelstyle-CCCCCC darkertooltipped" style="background-color: #CCCCCC; color: #333333;">1 - Ready</a>
+							<a href="https://github.com/aspnet/XRE/issues?q=is%3Aopen+label%3Abug" aria-label="View all bug issues" class="label labelstyle-fc2929 linked-labelstyle-fc2929 lightertooltipped" style="background-color: #fc2929; color: #fff;">bug</a>
+							<div class="">
+								#1153 opened <time datetime="2015-01-30T05:15:34Z" is="relative-time" title="Jan 29, 2015, 9:15 PM PST">2 days ago</time> by
+								<a href="https://github.com/aspnet/XRE/issues?q=is%3Aissue+is%3Aopen+author%3Adavidfowl" aria-label="View all issues opened by davidfowl" class="tooltipped tooltipped-s muted-link">davidfowl</a>
+								<a class="" aria-label="View all issues in this milestone" href="https://github.com/aspnet/XRE/milestones/1.0.0-rc1">
+									1.0.0-rc1
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-8 contentPain" >
+		<div class="affixer" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+			<div class="panel panel-primary " >
+				<div class="panel-heading">
+					pre-canned responses, add comments, etc.
+				</div>
+				<div class="panel-body">
+					<div class="btn-group">
+						<!-- I think ideally here we would pop a dialog that lets you customize a response-->
+						<button type="button" class="btn btn-danger">Close</button>
+						<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Close - dialog</a></li>
+							<li><a href="#">Close - no comment</a></li>
+							<li class="divider"></li>
+							<!-- dynamic, based on the canned responses that have been saved -->
+							<li><a href="#">Close - response 1</a></li>
+							<li><a href="#">Close - response 2</a></li>
+							<li><a href="#">Close - response 3</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<!-- I think ideally here we would pop a dialog that lets you customize a response-->
+						<button type="button" class="btn btn-default dropdown-toggle btn-success" data-toggle="dropdown" aria-expanded="false">
+						Move to ...<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<!-- dynamic, all repos in the current org -->
+							<li><a href="#">XRE</a></li>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">MVC</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@section scripts {
+<script type="text/javascript" src="~/scripts/issues.js"></script>
+}
